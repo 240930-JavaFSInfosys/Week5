@@ -8,7 +8,7 @@ p {
 #radioContainer{
     border: double 6px pink;
     border-radius: 25px;
-    padding:15px /*padding gives us space between content and border*/
+    padding:30px /*padding gives us space between content and border*/
 }
 
 /*Every element with a class of "list" will get these styles*/
@@ -19,4 +19,10 @@ p {
     font-weight: bolder;
     font-style: italic;
     font-size: larger;
+    margin:100px /*Margin makes space between an element and its neighbors*/
+}
+
+/*EVERY ELEMENT will get this style*/
+*{
+    background-color:lightgreen;
 }
