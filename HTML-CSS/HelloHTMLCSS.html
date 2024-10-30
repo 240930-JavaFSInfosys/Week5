@@ -57,10 +57,108 @@
         <li>The Mario Movie</li>
     </ul>
 
-    <!--TODO: tables-->
 
-    <!--TODO: elements for user input-->
+    <!--------------------------------------------(Tables)-->
 
+
+    <h3>Our Favorite Pokemon</h3>
+
+    <!--Tables are great for displaying data-->
+    <table>
+        <thead> <!--This defines the table's header row (its column names)-->
+            <tr> <!--This defines a table row-->
+                <th>PokeName</th> 
+                <th>PokeType</th>
+                <th>TrainerName</th><!--These define a cell in the Table's header row-->
+            </tr>
+        </thead>
+        <tbody> <!--This defines the table's body section (which also uses <tr> for every row)-->
+            <tr>
+                <td>Mudkip</td> <!--This defined a cell of the table's data-->
+                <td>Water</td>
+                <td>Ben</td>
+            </tr>
+            <tr>
+                <td>Lucario</td>
+                <td>Fighting/Steel</td>
+                <td>Lina</td>
+            </tr>
+            <tr>
+                <td>Gyarados</td>
+                <td>Water/Flying</td>
+                <td>Joe V</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br><br>
+
+    <!--------------------------------------------(Input Elements)-->
+
+    <!--You don't have a functional front end without being able to take user input (usually)-->
+    <p>Enter your username:</p>
+    <input type="text" placeholder="ex: coolUserName">
+
+    <p>Enter your password:</p>
+    <input type="password">
+
+    <p>Enter your age:</p>
+    <input type="number">
+
+    <!--Radio Buttons only let you choose one option at once-->
+    <h4>Choose An Option:</h4>
+
+    <div id="radioContainer">
+        
+        <!--name is how we can group input buttons together-->
+        <!--id is how we can uniquely identify inputs so that we can gather and use the user input-->
+        <div>
+            <input type="radio" name="radioGroup" id="radio1">
+            <label for="radio1">I WILL NOT CHOOSE!</label>
+        </div>
+
+        <div>
+            <input type="radio" name="radioGroup" id="radio2">
+            <label for="radio2">I WILL CHOOSE!</label>
+        </div>
+
+    </div>
+
+    <!--Checkboxes allow you to select multiple options at once-->
+    <h4>How are you Feeling?</h4>
+
+    <div>
+        <input type="checkbox" name="checkGroup" id="check1">
+        <label for="check1">Sad</label>
+    </div>
+    <div>
+        <input type="checkbox" name="checkGroup" id="check2">
+        <label for="check2">Happy</label>
+    </div>
+    <div>
+        <input type="checkbox" name="checkGroup" id="check3">
+        <label for="check3">Indifferent</label>
+    </div>
+
+    <br>
+
+
+    <!--Select elements let us define dropdown boxes-->
+    <!--"Disabled" makes an option unchooseable.-->
+    <!--"Selected" selects an option by default.-->
+    <select name="Names" id="Names">
+        <option value="" disabled selected>Choose a Name:</option>
+        <option value="Vincent">Vincent</option> 
+        <option value="Hugo">Hugo</option>
+        <option value="Bob">Bob</option>
+        <option value="Linda">Linda</option>
+        <!--value is the data being stored. The content inside the <option> is what the user sees-->
+    </select>
+
+    <br><br><br> <!--Just some space at the bottom-->
+
+    <!--Buttons are super easy to use, and they'll be all over every webpage-->
+    <button>Hello I am a button that doesn't do anything</button>
 
 </body>
 
