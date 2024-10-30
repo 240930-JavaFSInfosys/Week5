@@ -9,13 +9,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello HTML CSS</title>
+
+    <style>
+        /*We could have defined CSS styles here, but we won't*/
+    </style>
+
+    <!--This is how we can link external CSS to HTML files!-->
+    <!--"href" is the style sheet we want to apply-->
+    <link rel="stylesheet" href="HelloHTMLCSS.css">
+
 </head>
 
 <!--The body contains all of the actual content of your webpage. AKA our elements!-->
 <body>
 
     <!-- h1 through h6 are "headers". h1 is biggest-->
-    <h1>Hello HTML! We are officially front end devs!</h1>
+    <h1 style="color:limegreen; font-family:cursive">Hello HTML! We are officially front end devs!</h1>
+    <!--We styled this H1 with INLINE STYLING! Considered bad practice but ok to use-->
+
     <h6>I am a smol header</h6>
 
      <!--<p> is a paragraph. generic line of text-->
@@ -30,8 +41,8 @@
 
     <!--<div> is your general "division" element. We usually group elements together inside divs-->
     <div style="color:red;">
-        <p>I am a paragraph in a div!</p>
-        <span>I am a span in a div!</span>
+        <p>I am a paragraph in a div styled with inline styling!</p>
+        <span>I am a span in a div styled with inline styling!</span>
     </div>
 
     <!--------------------------------------------(Lists)-->
@@ -39,7 +50,7 @@
     <h3>Our Favorite Movies:</h3>
 
     <!--Ordered Lists! Lists items in 1, 2, 3, .... format-->
-    <ol>
+    <ol class="list">
         <li>Lord of the Rings</li> <!-- <li> = "list item" -->
         <li>Godzilla</li>
         <li>Spirited Away</li>
@@ -50,7 +61,7 @@
     <h4>Honorable Mentions:</h4>
 
     <!--Unordered List! Lists items in bullter format-->
-    <ul>
+    <ul class="list">
         <li>Saving Private Ryan</li>
         <li>Rush Hour</li>
         <li>Jurassic Park</li>

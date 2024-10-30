@@ -1,0 +1,22 @@
+/*Every <p> element will get this styling*/
+p {
+    color:mediumblue;
+    text-align: center; 
+}
+
+/*Every element with an id of "radioContainer" will get this styling*/
+#radioContainer{
+    border: double 6px pink;
+    border-radius: 25px;
+    padding:15px /*padding gives us space between content and border*/
+}
+
+/*Every element with a class of "list" will get these styles*/
+.list{
+    background-color: bisque;
+    color:blueviolet;
+    font-family:monospace;
+    font-weight: bolder;
+    font-style: italic;
+    font-size: larger;
+}
