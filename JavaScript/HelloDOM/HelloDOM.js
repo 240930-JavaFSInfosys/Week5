@@ -36,9 +36,30 @@ function btn1function(){
     alert("YOU CLICKED A BUTTON! Great work.")
 }
 
-//TODO: DOM select btn2 and p1
+//DOM select btn2 and p1
+let btn2 = document.getElementById("btn2")
+let p1 = document.getElementById("p1")
 
-//TODO: Add an EventListener to btn2
+//Add an EventListener to btn2 - THE SHORTER WAY!
+btn2.onclick = btn2function
 
-//TODO: function to give p1 some text content
+//function to give p1 some text content
+function btn2function(){
+    p1.textContent = "Now I have content! Thanks"
+}
 
+//some mouseOver/mouseLeave examples for our h2
+
+//need to DOM select, add event listener, define functions
+let header = document.getElementById("header")
+
+header.onmouseover = mouseOverFunction
+header.onmouseleave = mouseLeaveFunction
+
+function mouseOverFunction(){
+    header.textContent = "Don't touch me!!!!"
+}
+
+function mouseLeaveFunction(){
+    header.textContent = "Wait come back :("
+}
