@@ -35,9 +35,11 @@ function f1(x){
 }
 
 function f2(x, someFunction){
-    //TODO: use f1 within f2
+    console.log("Inside Function 2")
+    someFunction(x) //"someFunction" is just a variable name we gave for the passed in function
+    console.log("End of Function 2")
 }
 
-//TODO: call f2
+f2(1000, f1) //f2 is taking in a number and and function f1
 
 console.log("==========================(Scopes)")
