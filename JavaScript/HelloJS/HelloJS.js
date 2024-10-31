@@ -37,9 +37,9 @@ let test2 = "5" + 5
 console.log("String plus number is: " + test2 + "\n"  + typeof test2 + "\n")
 //string - JS assumes we're String concatenating, since we're using the + operator
 
-//If we did 5 + "5", it would be the same outcome - order doesn't matter for 2 variables
+//If we did 5 + "5", it would be the same outcome - order doesn't matter for 2 values
 
-//Now let's see this + operator with more than 2 variables
+//Now let's see this + operator with more than 2 values
 
 let test3 = 5 + 5 + "5"
 console.log("number plus number plus String is: " + test3 + "\n"  + typeof test3 + "\n")
@@ -51,5 +51,24 @@ console.log("String plus number plus number is: " + test4 + "\n"  + typeof test4
 
 console.log("============================(Truthy/Falsy Values)")
 
+//I want a write a function that compares two values to demonstrate truthy/falsy
+//We'll be comparing same value to the booleans true or false
+function testTrueFalse(var1, var2){
+    console.log("~~~~")
+    console.log(var1 + " compared to " + var2)
+    console.log(var1 == var2)
+    console.log("~~~~")
+}
 
+testTrueFalse(0, false) //true! 0 == false 
+testTrueFalse(1, true) //true! non-zero numbers == true
+testTrueFalse(" ", false) //true! " " == false
+testTrueFalse(2, true) //FALSE... why?? see below:
 
+//while any non-zero number is truthy, the boolean true evaluates to the number 1
+//so comparing any number besides 1 to the boolean true will return false
+
+//2 is truthy, I promise - I'll prove it
+if(2){
+    console.log("any non-zero number is truthy!")
+}
