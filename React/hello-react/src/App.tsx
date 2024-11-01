@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { FirstComponent } from './Components/FirstComponent/FirstComponent';
+import { ParentComponent } from './Components/ParentComponent/ParentComponent';
 
 /* The App.tsx is the root of our app (at least when it comes to rendering stuff on the page)
 
@@ -23,6 +24,7 @@ function App() {
         <h3>React will reload the webpage with every saved change to the App</h3>
 
         <FirstComponent></FirstComponent>
+        <ParentComponent></ParentComponent>
 
         <a
           className="App-link"
