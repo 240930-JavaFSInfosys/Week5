@@ -24,9 +24,31 @@ async function fetchData(){
     //Then, we can use the fetch() method to send a GET request to pokeAPI
     //fetch sends GET requets by default BTW
     await fetch($URL + userInput) //https://...../pokemon/{whatever the user put in}
-    .then()
-    .then()
+    .then((response) => response.json()) //extract the body of the HTTP response, and turn it into a JavaScript object
+    .then((data) => renderHTML(data)) //Send the JS data (in the "data" variable) to our renderHTML function below
     .catch()
     .finally()
+
+}
+
+//This function will take in the JS Pokemon data and render it!
+function renderHTML(data){
+
+    //getting all of the pokemon's types in one string
+    //for every type found, append it to the "types" variable
+    let types = ""
+    for(let element of data.types){
+        types += element.type.name + " " 
+    }
+
+    console.log(data) //Just to see the data in the console
+
+    //populate the table with our Pokemon data
+    pokename.innerText = data.name
+    poketype.innerText = types
+    pokenum.innerText = data.id
+
+    //pokepic is an <img> so we need to set the src attribute to change it
+    pokepic.setAttribute("src", data.sprites.front_default)
 
 }
