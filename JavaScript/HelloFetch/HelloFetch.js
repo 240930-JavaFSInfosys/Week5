@@ -26,8 +26,10 @@ async function fetchData(){
     await fetch($URL + userInput) //https://...../pokemon/{whatever the user put in}
     .then((response) => response.json()) //extract the body of the HTTP response, and turn it into a JavaScript object
     .then((data) => renderHTML(data)) //Send the JS data (in the "data" variable) to our renderHTML function below
-    .catch()
-    .finally()
+    .catch((error) => document.getElementById("header").innerText = "Invalid ID! It got away... Try again")
+    .finally(setTimeout(() => document.getElementById("header").innerText = "Find another Pokemon:", 2000))
+
+    //setTimeout() lets us define a function to invoke after some amount of milliseconds (2000 millis == 2 seconds)
 
 }
 
@@ -52,3 +54,14 @@ function renderHTML(data){
     pokepic.setAttribute("src", data.sprites.front_default)
 
 }
+
+//Hypothetical POST Request-------------------------- 
+
+//In any non-GET request, fetch() needs the configuration object 
+await fetch(url, {
+    method: "POST", //sends a POST instead a get
+    body: JSON.stringify(newPokemonObject) //imagine we're sending a JS pokemon object that we convert to JSON
+})
+.then()//stuff
+.catch()//error handling stuff
+.finally()//stuff that will always run

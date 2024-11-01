@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { FirstComponent } from './Components/FirstComponent/FirstComponent';
 
 /* The App.tsx is the root of our app (at least when it comes to rendering stuff on the page)
 
@@ -16,6 +17,12 @@ function App() {
       <header className="App-header">
         
         <h1>Hello React! We'll make great modern front ends with you :)</h1>
+
+        <p>We are writing in TSX, which is like HTML for React TS</p>
+
+        <h3>React will reload the webpage with every saved change to the App</h3>
+
+        <FirstComponent></FirstComponent>
 
         <a
           className="App-link"
