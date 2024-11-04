@@ -9,7 +9,9 @@ export const ChildComponent:React.FC<any> = ({color, animal}) => {
 
     return(
         <div>
-            
+            <h4>Hello from ChildComponent</h4>
+            <h4 style={{color}}>My Parent's fav color is: {color}</h4>
+            <h5>My Parent's fav animal: {animal}</h5>
         </div>
     )
 
