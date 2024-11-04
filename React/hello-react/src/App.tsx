@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { FirstComponent } from './Components/FirstComponent/FirstComponent';
 import { ParentComponent } from './Components/ParentComponent/ParentComponent';
+import { UserComponent } from './Components/UserComponent/UserComponent';
 
 /* The App.tsx is the root of our app (at least when it comes to rendering stuff on the page)
 
@@ -25,6 +26,7 @@ function App() {
 
         <FirstComponent></FirstComponent>
         <ParentComponent></ParentComponent>
+        <UserComponent></UserComponent>
 
         <a
           className="App-link"
