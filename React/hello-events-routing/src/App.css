@@ -1,0 +1,9 @@
+/*App.css is great for global stylings - styles that apply for the entire app*/
+
+/*We can set a global background image like this*/
+body{
+  background-image: url("../public/breakingbad.jpg");
+  background-position: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
