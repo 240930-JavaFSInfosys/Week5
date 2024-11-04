@@ -15,8 +15,7 @@
 .profile-pic {
     height: 50px;
     width: 50px;
-    border-radius: 100%;
-    object-fit: cover;
+    border-radius: 50%;
 }
 .content-container {
     margin-left: 100px;
