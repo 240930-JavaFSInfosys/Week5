@@ -4,6 +4,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { CalculationComponent } from './Components/CalculationComponent/Calculation';
 import { EmployeeContainer } from './Components/EmployeeComponent/EmployeeContainer';
+import { data } from './employeeData';
 
 /* In this demo, we'll use react-router-dom to establish routes for our components 
 This is what lets us dynamically render components based on URL endpoints*/
@@ -18,7 +19,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/calc" element={<CalculationComponent/>}></Route>
-          <Route path="/emp" element={<EmployeeContainer/>}></Route>
+          <Route path="/emp" element={<EmployeeContainer incomingData={data}/>}></Route>
         </Routes>
       </BrowserRouter>
 
