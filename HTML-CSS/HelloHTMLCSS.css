@@ -32,4 +32,5 @@ p {
     display:flex; /*turns the element into a flexbox which let us do stuff like this:*/
     flex-direction: column;
     align-items: center;
+    gap: 25px;
 }

@@ -17,7 +17,7 @@ async function fetchData(){
 
     //First, we need to gather the user's input from the input box
     let userInput = document.getElementById("userInput").value
-    //.value will extract whatever value is in the input box 
+    //.value will reflect whatever value is in the input box 
 
     console.log(userInput) //just to see the value
 
