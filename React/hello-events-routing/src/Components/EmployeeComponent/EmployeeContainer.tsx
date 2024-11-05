@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 //This will take in data from employeeData.ts (sent as props in App.tsx)
-export const EmployeeContainer:React.FC<any> = (incomingData) => {
+export const EmployeeContainer:React.FC<any> = (incomingData:any) => {
 
     //state variable to store an array of the employee data
     const[employees, setEmployees] = useState<any[]>([])
@@ -12,6 +12,9 @@ export const EmployeeContainer:React.FC<any> = (incomingData) => {
 
         //set the employees state object with the employee data
         setEmployees(incomingData.incomingData)
+
+        //We had to do incomingData.incomingData to access the ARRAY inside the props object
+        //setEmployees(propsObject.arrayInThePropsObject)
 
         console.log(employees) //just so we can see employees in console
 
@@ -25,7 +28,11 @@ export const EmployeeContainer:React.FC<any> = (incomingData) => {
             <h3>Employee Container</h3>
 
             {/* using map() to render an Employee Component for every employee in the array */}
-
+            <div>
+                {employees.map((employee:any)=>{
+                    return <p>{employee.name}</p>
+                })}
+            </div>
 
         </div>
     )
