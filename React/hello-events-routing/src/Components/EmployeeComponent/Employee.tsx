@@ -6,10 +6,10 @@ export const Employee:React.FC<any> = (employee:any) => {
     return(
         <div>
             <div>
-                <h3>{employee.name}</h3>
+                <h3>{employee.id}) {employee.name}</h3>
             </div>
             <div>
-                <h3>{employee.quote}</h3>
+                <h3>"{employee.quote}"</h3>
             </div>
         </div>
     )

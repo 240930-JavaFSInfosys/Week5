@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Employee } from "./Employee"
 
 //This will take in data from employeeData.ts (sent as props in App.tsx)
 export const EmployeeContainer:React.FC<any> = (incomingData:any) => {
@@ -24,17 +25,17 @@ export const EmployeeContainer:React.FC<any> = (incomingData:any) => {
 
 
     return(
-        <div>
+        <>
             <h3>Employee Container</h3>
 
             {/* using map() to render an Employee Component for every employee in the array */}
             <div>
                 {employees.map((employee:any)=>{
-                    return <p>{employee.name}</p>
+                    return <Employee {...employee} key={employee.id}></Employee>
                 })}
             </div>
 
-        </div>
+        </>
     )
 
 } 
